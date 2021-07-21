@@ -43,15 +43,22 @@
 
 .header {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   height: 100px;
   background: gray;
 }
 
-.orange {
-  background: orange;
-  width: 80px;
+.logo {
+  transform: translateX(var(--sidebar-togger-offset));
+  padding: 1rem;
+}
+
+.auth {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
   height: 80px;
 }
 
