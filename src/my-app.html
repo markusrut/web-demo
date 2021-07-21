@@ -1,25 +1,38 @@
-<div class="sidebar" active.class="sidebarOpen">
-  <div class="sidebar__toggler">
-    <input type="checkbox" id="sidebarToggle" checked.bind="sidebarOpen" />
-    <label for="sidebarToggle">Toggle sidebar</label>
-  </div>
-</div>
-<div class="main">
-  <div class="header">
-    <div class="logo">Logo placeholder</div>
-    <div class="search">
-      <input class="search__input" type="search" placeholder="Search..." />
-      <input class="search__btn" type="submit" value="Search" />
+<template light.class="lightmode">
+  <div class="sidebar" active.class="sidebarOpen">
+    <div class="sidebar__toggler">
+      <input type="checkbox" id="sidebarToggle" checked.bind="sidebarOpen" />
+      <label for="sidebarToggle">Toggle sidebar</label>
     </div>
+  </div>
+  <div class="main">
+    <div class="header">
+      <div class="logo"></div>
+      <div class="search">
+        <input class="search__input" type="search" placeholder="Search..." />
+        <input class="search__btn" type="submit" value="Search" />
+      </div>
 
-    <div class="auth">
-      <button class="auth__login" type="button" click.trigger="login()">
-        Sign in
-      </button>
-      <button class="auth__signup" type="button" click.trigger="signup()">
-        Join
-      </button>
+      <div class="profile">
+        <div class="profile__auth">
+          <button class="auth__login" type="button" click.trigger="login()">
+            Sign in
+          </button>
+          <button class="auth__signup" type="button" click.trigger="signup()">
+            Join
+          </button>
+        </div>
+        <div class="profile__lightmode">
+          <input
+            id="lightmodeToggle"
+            class="lightmode__input"
+            type="checkbox"
+            checked.bind="lightmode"
+          />
+          <label for="lightmodeToggle">Toggle lightmode</label>
+        </div>
+      </div>
     </div>
+    <div class="body"></div>
   </div>
-  <div class="body"></div>
-</div>
+</template>

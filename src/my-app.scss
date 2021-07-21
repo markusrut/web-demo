@@ -1,37 +1,53 @@
+@import url("./styles/main.scss");
+
 :host {
   position: relative;
   display: flex;
   height: 100%;
   overflow: hidden;
+  padding: 0.5rem;
+
+  background: var(--bg-900);
+  color: var(--color-font);
 }
 
 .sidebar {
   --sidebar-width: 0;
-  --sidebar-togger-offset: 100px;
+  --sidebar-margin: 0;
+  --sidebar-toggler-offset: 100px;
+  --sidebar-toggler-transition-delay: 400ms;
+
+  --margin-transition: margin 0.1s linear 0.6s;
 
   &.active {
     --sidebar-width: 100px;
-    --sidebar-togger-offset: 0;
+    --sidebar-margin: 0.5rem;
+    --sidebar-toggler-offset: 0;
+    --margin-transition: margin 0.2s linear;
 
     @media (min-width: 1200px) {
       --sidebar-width: 300px;
+      --sidebar-toggler-transition-delay: 0;
     }
   }
 
-  border-right: 2px solid grey;
   position: relative;
+  border-radius: 0.5rem;
+  background: var(--bg-800);
+  margin-right: var(--sidebar-margin);
   width: var(--sidebar-width);
-  transition: width 0.5s ease-in-out;
+  transition: width 0.6s linear, var(--margin-transition);
 
   &__toggler {
     position: absolute;
-    background: purple;
+    background: var(--color-primary);
     top: 10px;
     right: 10px;
     width: 80px;
     height: 80px;
-    transform: translateX(var(--sidebar-togger-offset));
-    transition: transform 0.5s ease-in-out;
+    transform: translateX(var(--sidebar-toggler-offset));
+    transition: transform 0.2s linear;
+    transition-delay: var(--sidebar-toggler-transition-delay);
   }
 }
 
@@ -39,30 +55,37 @@
   flex: 1;
   display: flex;
   flex-direction: column;
+  gap: 0.5rem;
 }
 
 .header {
+  height: 100px;
+  border-radius: 0.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100px;
-  background: gray;
+  background: var(--bg-800);
 }
 
 .logo {
-  transform: translateX(var(--sidebar-togger-offset));
   padding: 1rem;
 }
 
-.auth {
+.profile {
   display: flex;
   align-items: center;
   gap: 1rem;
   padding: 1rem;
-  height: 80px;
+
+  &__auth {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
 }
 
 .body {
+  border-radius: 0.5rem;
   flex: 1;
-  background: lightgray;
+  background: var(--bg-700);
 }

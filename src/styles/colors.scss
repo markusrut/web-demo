@@ -1,0 +1,75 @@
+:root,
+:host {
+  --blue-grey-50: hsl(206, 33%, 96%);
+  --blue-grey-100: hsl(213, 32%, 89%);
+  --blue-grey-200: hsl(210, 31%, 80%);
+  --blue-grey-300: hsl(211, 27%, 70%);
+  --blue-grey-400: hsl(209, 23%, 60%);
+  --blue-grey-500: hsl(210, 22%, 49%);
+  --blue-grey-600: hsl(209, 28%, 39%);
+  --blue-grey-700: hsl(210, 35%, 31%);
+  --blue-grey-800: hsl(211, 39%, 23%);
+  --blue-grey-900: hsl(209, 61%, 16%);
+
+  --cool-grey-50: hsl(216, 33%, 97%);
+  --cool-grey-100: hsl(214, 15%, 91%);
+  --cool-grey-200: hsl(210, 16%, 82%);
+  --cool-grey-300: hsl(211, 13%, 65%);
+  --cool-grey-400: hsl(211, 10%, 53%);
+  --cool-grey-500: hsl(211, 12%, 43%);
+  --cool-grey-600: hsl(209, 14%, 37%);
+  --cool-grey-700: hsl(209, 18%, 30%);
+  --cool-grey-800: hsl(209, 20%, 25%);
+  --cool-grey-900: hsl(210, 24%, 16%);
+
+  --warm-grey-50: hsl(40, 23%, 97%);
+  --warm-grey-100: hsl(43, 13%, 90%);
+  --warm-grey-200: hsl(40, 15%, 80%);
+  --warm-grey-300: hsl(39, 11%, 69%);
+  --warm-grey-400: hsl(41, 8%, 61%);
+  --warm-grey-500: hsl(41, 8%, 48%);
+  --warm-grey-600: hsl(41, 9%, 35%);
+  --warm-grey-700: hsl(38, 11%, 28%);
+  --warm-grey-800: hsl(40, 13%, 23%);
+  --warm-grey-900: hsl(42, 15%, 13%);
+
+  --blue: hsl(232, 54%, 41%);
+  --grey: hsl(0, 0%, 74%);
+  --teal: hsl(174, 100%, 27%);
+  --yellow: hsl(38, 100%, 50%);
+  --red: hsl(0, 66%, 47%);
+  --purple: hsl(262, 52%, 47%);
+
+  --color-font-100: hsl(0, 0%, 88%);
+  --color-font-900: hsl(0, 0%, 5%);
+
+  --color-font: var(--color-font-100);
+
+  --bg-50: var(--blue-grey-50);
+  --bg-100: var(--blue-grey-100);
+  --bg-200: var(--blue-grey-200);
+  --bg-300: var(--blue-grey-300);
+  --bg-400: var(--blue-grey-400);
+  --bg-500: var(--blue-grey-500);
+  --bg-600: var(--blue-grey-600);
+  --bg-700: var(--blue-grey-700);
+  --bg-800: var(--blue-grey-800);
+  --bg-900: var(--blue-grey-900);
+
+  --color-primary: var(--purple);
+}
+
+:host(.light) {
+  --color-font: var(--color-font-900);
+
+  --bg-50: var(--blue-grey-900);
+  --bg-100: var(--blue-grey-800);
+  --bg-200: var(--blue-grey-700);
+  --bg-300: var(--blue-grey-600);
+  --bg-400: var(--blue-grey-500);
+  --bg-500: var(--blue-grey-400);
+  --bg-600: var(--blue-grey-300);
+  --bg-700: var(--blue-grey-200);
+  --bg-800: var(--blue-grey-100);
+  --bg-900: var(--blue-grey-50);
+}
