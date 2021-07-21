@@ -1,8 +1,10 @@
 <template light.class="lightmode">
   <div class="sidebar" active.class="sidebarOpen">
     <div class="sidebar__toggler">
-      <input type="checkbox" id="sidebarToggle" checked.bind="sidebarOpen" />
-      <label for="sidebarToggle">Toggle sidebar</label>
+      <menu-burger
+        open.bind="sidebarOpen"
+        click.trigger="sidebarOpen = !sidebarOpen"
+      ></menu-burger>
     </div>
   </div>
   <div class="main">
