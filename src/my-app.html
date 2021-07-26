@@ -18,13 +18,7 @@
           <button type="button" load="page-sign-up">Join</button>
         </div>
         <div class="profile__darkmode">
-          <input
-            id="darkmode-toggle"
-            class="darkmode__input"
-            type="checkbox"
-            checked.bind="darkmode"
-          />
-          <label for="darkmode-toggle">Toggle darkmode</label>
+          <darkmode-toggle dark.two-way="darkmode"></darkmode-toggle>
         </div>
       </div>
     </div>

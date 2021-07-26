@@ -1,0 +1,86 @@
+:host {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  --color-sun: hsl(51, 95%, 54%);
+  --color-moon: hsl(51, 30%, 26%);
+  // --color-moon-cover: hsl(0, 0%, 95%);
+
+  --transition-duration: 500ms;
+
+  --sun-scale: 0.5;
+  --sun-ray-scale: 0.9;
+  --moon-scale: 0.7;
+}
+
+.darkmode-toggle {
+  & * {
+    transform-origin: center;
+  }
+
+  & .sun {
+    fill: var(--color-moon);
+    opacity: 0;
+    transform: scale(var(--moon-scale));
+    transition: transform var(--transition-duration)
+        cubic-bezier(0.82, 0.38, 0.35, 2.02),
+      opacity var(--transition-duration) ease-in-out,
+      fill var(--transition-duration) ease-in-out;
+  }
+
+  & .sun-rays {
+    fill: var(--color-moon);
+    opacity: 0;
+    transform: scale(0.6);
+    transition: transform var(--transition-duration)
+        cubic-bezier(0.82, 0.38, 0.35, 2.02),
+      opacity var(--transition-duration) ease-in-out,
+      fill var(--transition-duration) ease-in-out;
+  }
+
+  & .moon {
+    fill: var(--color-moon);
+    opacity: 1;
+    transform: scale(var(--moon-scale));
+    transition: transform var(--transition-duration)
+        cubic-bezier(0.82, 0.38, 0.35, 2.02),
+      opacity var(--transition-duration) ease-in-out,
+      fill var(--transition-duration) ease-in-out;
+  }
+
+  // & .moon-cover {
+  //   fill: var(--color-moon-cover);
+  //   opacity: 1;
+  //   transform: scale(var(--moon-scale));
+  //   transition: transform var(--transition-duration)
+  //       cubic-bezier(0.82, 0.38, 0.35, 2.02),
+  //     opacity var(--transition-duration) ease-in-out;
+  // }
+
+  &.dark {
+    & .sun {
+      fill: var(--color-sun);
+      opacity: 1;
+      transform: scale(var(--sun-scale));
+    }
+
+    & .sun-rays {
+      fill: var(--color-sun);
+      opacity: 1;
+      transform: scale(var(--sun-ray-scale));
+    }
+
+    & .moon {
+      fill: var(--color-sun);
+      opacity: 0;
+      transform: scale(var(--sun-scale));
+    }
+
+    // & .moon-cover {
+    //   opacity: 0;
+    //   transform: scale(var(--sun-scale));
+    // }
+  }
+}

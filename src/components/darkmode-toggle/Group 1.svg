@@ -1,0 +1,19 @@
+<svg width="100" height="100" viewBox="0 0 100 100" fill="none"
+  xmlns="http://www.w3.org/2000/svg">
+  <path class="moon" d="M100 50C100 77.6142 77.6142 100 50 100C22.3858 100 0 77.6142 0 50C0 22.3858 22.3858 0 50 0C25 35 65 75 100 50Z" />
+  <circle class="sun" cx="50" cy="50" r="25"/>
+  <g class="sun-rays">
+    <rect id="sun-ray-12" x="20.6584" y="9.20536" width="10" height="20" rx="5" transform="rotate(-30 20.6584 9.20536)"/>
+    <rect id="sun-ray-11" x="4.219" y="29.2951" width="10" height="20" rx="5" transform="rotate(-60 4.219 29.2951)"/>
+    <rect id="sun-ray-10" y="55" width="10" height="20" rx="5" transform="rotate(-90 0 55)"/>
+    <rect id="sun-ray-09" x="9.20536" y="79.3416" width="10" height="20" rx="5" transform="rotate(-120 9.20536 79.3416)"/>
+    <rect id="sun-ray-08" x="29.2951" y="95.781" width="10" height="20" rx="5" transform="rotate(-150 29.2951 95.781)"/>
+    <rect id="sun-ray-07" x="45" y="80" width="10" height="20" rx="5"/>
+    <rect id="sun-ray-06" x="60.6813" y="78.4741" width="10" height="20" rx="5" transform="rotate(-30 60.6813 78.4741)"/>
+    <rect id="sun-ray-05" x="73.4605" y="69.3652" width="10" height="20" rx="5" transform="rotate(-60 73.4605 69.3652)"/>
+    <rect id="sun-ray-04" x="80" y="55" width="10" height="20" rx="5" transform="rotate(-90 80 55)"/>
+    <rect id="sun-ray-03" x="78.4741" y="39.3187" width="10" height="20" rx="5" transform="rotate(-120 78.4741 39.3187)"/>
+    <rect id="sun-ray-02" x="69.3652" y="26.5395" width="10" height="20" rx="5" transform="rotate(-150 69.3652 26.5395)"/>
+    <rect id="sun-ray-01" x="45" width="10" height="20" rx="5"/>
+  </g>
+</svg>
