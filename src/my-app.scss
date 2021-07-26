@@ -38,16 +38,22 @@
   gap: 1rem;
   padding: 1rem;
 
-  &__auth {
+  &__login {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 0.5rem;
   }
 }
 
 .body {
   border-radius: 0.5rem;
+  display: flex;
   flex: 1;
   background: var(--bg-200);
   transition: var(--color-transition);
+
+  & au-viewport {
+    flex: 1;
+    display: flex;
+  }
 }

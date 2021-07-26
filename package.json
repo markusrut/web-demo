@@ -8,13 +8,14 @@
   },
   "license": "UNLICENSED",
   "dependencies": {
-    "aurelia": "latest",
+    "aurelia": "2.0.0-alpha.10",
+    "aurelia-direct-router": "^2.0.0-alpha.9.0",
     "firebase": "^8.7.1"
   },
   "devDependencies": {
-    "@aurelia/testing": "latest",
-    "@aurelia/ts-jest": "latest",
-    "@aurelia/webpack-loader": "latest",
+    "@aurelia/testing": "2.0.0-alpha.10",
+    "@aurelia/ts-jest": "2.0.0-alpha.10",
+    "@aurelia/webpack-loader": "2.0.0-alpha.10",
     "@types/jest": "^26.0.23",
     "@types/node": "^15.12.4",
     "@typescript-eslint/eslint-plugin": "^4.27.0",

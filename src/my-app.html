@@ -4,19 +4,18 @@
     <div class="header">
       <div class="logo"></div>
       <div class="search">
-        ${darkmode}
-        <!-- <input class="search__input" type="search" placeholder="Search..." />
-        <input class="search__btn" type="submit" value="Search" /> -->
+        <input class="search__input" type="search" placeholder="Search..." />
+        <input class="search__btn" type="submit" value="Search" />
       </div>
 
       <div class="profile">
-        <div class="profile__auth">
-          <button class="auth__login" type="button" click.trigger="login()">
-            Sign in
-          </button>
-          <button class="auth__signup" type="button" click.trigger="signup()">
-            Join
-          </button>
+        <div if.bind="auth.isAuthenticated" class="profile__info">
+          ${auth.displayName}
+          <button type="button" click.trigger="logout()">Sign out</button>
+        </div>
+        <div else class="profile__login">
+          <button type="button" load="page-login">Sign in</button>
+          <button type="button" load="page-sign-up">Join</button>
         </div>
         <div class="profile__darkmode">
           <input
@@ -29,6 +28,8 @@
         </div>
       </div>
     </div>
-    <div class="body"></div>
+    <div class="body">
+      <au-viewport default="page-overview"></au-viewport>
+    </div>
   </div>
 </template>
