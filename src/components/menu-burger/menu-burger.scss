@@ -2,29 +2,51 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--color-primary);
   --transition-duration: 500ms;
+  --fill-color: var(--bg-700);
 }
 
-.burger {
+#menu-toggle {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+
+  cursor: pointer;
+  background: 0;
+  border: 0;
+  border-radius: 50%;
+  position: relative;
+  isolation: isolate;
+
+  &:hover,
+  &:focus {
+    outline: 0;
+    background: hsl(0 0% 50% / 0.3);
+  }
+}
+
+svg {
+  fill: var(--fill-color);
+
   & * {
-    transition: transform var(--transition-duration) ease-in-out,
-      fill-opacity var(--transition-duration) ease-in-out,
-      var(--color-transition);
     transform-origin: center;
-    fill: currentColor;
+    transition: transform var(--transition-duration) ease-in-out,
+      fill var(--transition-duration) ease-in-out,
+      fill-opacity var(--transition-duration) ease-in-out;
   }
 
-  &.open &__top {
+  &.open .burger__top {
     transform: rotate(-45deg) translateY(40px);
   }
 
-  &.open &__middle {
+  &.open .burger__middle {
     transform: scaleX(0.5);
     fill-opacity: 0;
   }
 
-  &.open &__bottom {
+  &.open .burger__bottom {
     transform: rotate(45deg) translateY(-40px);
   }
 }
