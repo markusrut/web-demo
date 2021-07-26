@@ -4,7 +4,7 @@ import "firebase/auth";
 
 export class MyApp {
   sidebarOpen: boolean = false;
-  lightmode: boolean = true;
+  darkmode: boolean = true;
 
   private firebaseConfig = {
     apiKey: "AIzaSyChVVoOJ7QXNELWMcHnVAIRKNugDdkPYCM",

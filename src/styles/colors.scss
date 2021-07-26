@@ -43,6 +43,15 @@
   --color-font-100: hsl(0, 0%, 88%);
   --color-font-900: hsl(0, 0%, 5%);
 
+  --color-transition: background-color var(--color-transition-duration) linear
+      0ms,
+    color calc(var(--color-transition-duration) / 2) linear 0ms;
+  --color-transition-duration: 300ms;
+
+  transition: var(--color-transition);
+}
+
+:host {
   --bg-50: var(--blue-grey-50);
   --bg-100: var(--blue-grey-100);
   --bg-200: var(--blue-grey-200);
@@ -54,21 +63,11 @@
   --bg-800: var(--blue-grey-800);
   --bg-900: var(--blue-grey-900);
 
-  --color-font: var(--color-font-100);
+  --color-font: var(--color-font-900);
   --color-primary: var(--purple);
-
-  --color-transition: background-color var(--color-transition-duration) linear
-      0ms,
-    color calc(var(--color-transition-duration) / 2) linear 0ms;
-  --color-transition-duration: 300ms;
-
-  transition: var(--color-transition);
 }
 
-:host(.light) {
-  --color-font: var(--color-font-900);
-  --color-primary: var(--teal);
-
+:host(.dark) {
   --bg-50: var(--blue-grey-900);
   --bg-100: var(--blue-grey-800);
   --bg-200: var(--blue-grey-700);
@@ -79,4 +78,7 @@
   --bg-700: var(--blue-grey-200);
   --bg-800: var(--blue-grey-100);
   --bg-900: var(--blue-grey-50);
+
+  --color-font: var(--color-font-100);
+  --color-primary: var(--teal);
 }

@@ -1,18 +1,12 @@
-<template light.class="lightmode">
-  <div class="sidebar" active.class="sidebarOpen">
-    <div class="sidebar__toggler">
-      <menu-burger
-        open.bind="sidebarOpen"
-        click.trigger="sidebarOpen = !sidebarOpen"
-      ></menu-burger>
-    </div>
-  </div>
+<template dark.class="darkmode">
+  <menu-sidebar open.two-way="sidebarOpen"></menu-sidebar>
   <div class="main">
     <div class="header">
       <div class="logo"></div>
       <div class="search">
-        <input class="search__input" type="search" placeholder="Search..." />
-        <input class="search__btn" type="submit" value="Search" />
+        ${darkmode}
+        <!-- <input class="search__input" type="search" placeholder="Search..." />
+        <input class="search__btn" type="submit" value="Search" /> -->
       </div>
 
       <div class="profile">
@@ -24,14 +18,14 @@
             Join
           </button>
         </div>
-        <div class="profile__lightmode">
+        <div class="profile__darkmode">
           <input
-            id="lightmodeToggle"
-            class="lightmode__input"
+            id="darkmode-toggle"
+            class="darkmode__input"
             type="checkbox"
-            checked.bind="lightmode"
+            checked.bind="darkmode"
           />
-          <label for="lightmodeToggle">Toggle lightmode</label>
+          <label for="darkmode-toggle">Toggle darkmode</label>
         </div>
       </div>
     </div>
