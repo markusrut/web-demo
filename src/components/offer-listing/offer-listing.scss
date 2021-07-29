@@ -1,0 +1,37 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--bg-400);
+  gap: 0.5rem;
+}
+
+.image {
+  object-fit: cover;
+  height: 100px;
+}
+
+.profile {
+  border-bottom: 1px solid var(--bg-400);
+  padding: 0.5rem;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+
+.title {
+  font-weight: 400;
+}
+
+.description {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.category {
+  font-size: 12px;
+  opacity: 0.9;
+}
