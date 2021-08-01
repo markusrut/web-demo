@@ -1,25 +1,16 @@
-import { OfferListingModel } from "../../components/offer-listing/offer-listing";
+import Listing from "../../models/listing";
+import ListingStore from "../../services/listing-store";
 
 export class PageOverview {
-  offers: OfferListingModel[] = [];
+  selectedListing: Listing;
 
-  constructor() {
-    this.offers = this.createOffers(40);
+  public get listings(): Listing[] {
+    return this._store.listings;
   }
 
-  createOffers(count: number): OfferListingModel[] {
-    let result = [];
-    for (let i = 1; i <= count; i++) {
-      result.push({
-        id: `${i}`,
-        title: `Offer ${i}`,
-        description: `Offer ${i} description`,
-        price: `$${i}.00`,
-        imageUrl: `https://source.unsplash.com/random/300x200?sig=${i}`,
-        category: `Category ${i}`,
-        owner: `Owner ${i}`,
-      });
-    }
-    return result;
+  constructor(private readonly _store: ListingStore) {}
+
+  newListing(): void {
+    this.selectedListing = new Listing();
   }
 }

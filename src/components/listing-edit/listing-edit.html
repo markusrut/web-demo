@@ -1,0 +1,36 @@
+<div class="edit">
+  <h3>${existsInStore ? "Edit" : "Create" }</h3>
+  <div>
+    <label>Title</label>
+    <input
+      id="title"
+      type="text"
+      value.bind="listing.title"
+      placeholder="Title"
+    />
+  </div>
+  <div>
+    <label>Description</label>
+    <input
+      id="description"
+      type="text"
+      value.bind="listing.description"
+      placeholder="Description"
+    />
+  </div>
+  <div>
+    <label>Price</label>
+    <input-price price.two-way="listing.price"></input-price>
+  </div>
+  <div>
+    <label>Category</label>
+    <input type="text" value.bind="listing.category" placeholder="Category" />
+  </div>
+  <div>
+    <button disabled.bind="sameAsStore" click.trigger="save()">Save</button>
+  </div>
+</div>
+<div class="preview">
+  <h3>Preview</h3>
+  <listing-summary listing.bind="listing"></listing-summary>
+</div>

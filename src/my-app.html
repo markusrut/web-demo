@@ -1,8 +1,11 @@
 <template dark.class="darkmode">
-  <menu-sidebar open.two-way="sidebarOpen"></menu-sidebar>
+  <!-- <menu-sidebar open.two-way="sidebarOpen"></menu-sidebar> -->
   <div class="main">
     <div class="header">
-      <div class="logo"></div>
+      <div class="logo">
+        <a load="page-overview">Overview</a>
+        <a load="listing-edit">New listing</a>
+      </div>
       <div class="search">
         <input class="search__input" type="search" placeholder="Search..." />
         <input class="search__btn" type="submit" value="Search" />

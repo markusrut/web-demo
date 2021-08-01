@@ -6,13 +6,9 @@
     "skipLibCheck": true,
     "target": "ES2017",
     "esModuleInterop": true,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "sourceMap": true
   },
-  "include": [
-    "test",
-    "src"
-  ],
-  "files": [
-    "src/resource.d.ts"
-  ]
+  "include": ["test", "src"],
+  "files": ["src/resource.d.ts"]
 }

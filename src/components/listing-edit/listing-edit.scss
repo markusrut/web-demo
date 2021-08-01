@@ -1,0 +1,19 @@
+:host {
+  display: flex;
+  // display: grid;
+  // grid-template-columns: 3fr 1fr;
+  padding: 1rem;
+  gap: 1rem;
+  max-width: 800px;
+}
+
+.edit {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  & > div {
+    display: flex;
+    flex-direction: column;
+  }
+}

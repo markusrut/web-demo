@@ -1,4 +1,4 @@
-import AuthenticationService from "./components/services/authenticationService";
+import AuthenticationService from "./services/authentication-service";
 
 export class MyApp {
   sidebarOpen: boolean = true;

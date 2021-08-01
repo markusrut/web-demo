@@ -1,8 +1,15 @@
 <div class="container">
+  <div class="edit">
+    <listing-edit
+      if.bind="selectedListing"
+      listing.bind="selectedListing"
+    ></listing-edit>
+    <button click.trigger="newListing()">New</button>
+  </div>
   <div class="content">
-    <offer-listing
-      repeat.for="offer of offers"
-      offer.bind="offer"
-    ></offer-listing>
+    <listing-summary
+      repeat.for="listing of listings"
+      listing.bind="listing"
+    ></listing-summary>
   </div>
 </div>

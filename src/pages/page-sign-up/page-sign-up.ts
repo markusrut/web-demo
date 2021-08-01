@@ -1,5 +1,5 @@
 import { IRouter } from "aurelia-direct-router";
-import AuthenticationService from "../../components/services/authenticationService";
+import AuthenticationService from "../../services/authentication-service";
 
 export class PageSignUp {
   email: string;

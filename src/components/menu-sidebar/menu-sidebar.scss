@@ -46,6 +46,7 @@
   }
 
   position: relative;
+  display: flex;
   flex-shrink: 0;
   border-radius: 0.5rem;
   background: var(--bg-100);
@@ -65,5 +66,11 @@
     );
     transition: var(--sidebar-toggler-transition);
     color: var(--color-primary);
+  }
+
+  &__menu {
+    position: relative;
+    margin-top: 100px;
+    padding: 1rem;
   }
 }
